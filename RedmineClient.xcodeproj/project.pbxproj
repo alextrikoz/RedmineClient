@@ -1,0 +1,461 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11DD92DA16EF6BBC00347D4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DD92D916EF6BBC00347D4B /* Cocoa.framework */; };
+		11DD92E416EF6BBC00347D4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11DD92E216EF6BBC00347D4B /* InfoPlist.strings */; };
+		11DD92E616EF6BBC00347D4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD92E516EF6BBC00347D4B /* main.m */; };
+		11DD92EA16EF6BBC00347D4B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 11DD92E816EF6BBC00347D4B /* Credits.rtf */; };
+		11DD92ED16EF6BBC00347D4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD92EC16EF6BBC00347D4B /* AppDelegate.m */; };
+		11DD92F016EF6BBD00347D4B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11DD92EE16EF6BBD00347D4B /* MainMenu.xib */; };
+		11DD92F816EF6BBD00347D4B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DD92F716EF6BBD00347D4B /* SenTestingKit.framework */; };
+		11DD92F916EF6BBD00347D4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DD92D916EF6BBC00347D4B /* Cocoa.framework */; };
+		11DD930116EF6BBD00347D4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11DD92FF16EF6BBD00347D4B /* InfoPlist.strings */; };
+		11DD930416EF6BBD00347D4B /* RedmineClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD930316EF6BBD00347D4B /* RedmineClientTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11DD92FA16EF6BBD00347D4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11DD92CC16EF6BBC00347D4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11DD92D416EF6BBC00347D4B;
+			remoteInfo = RedmineClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11DD92D516EF6BBC00347D4B /* RedmineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedmineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11DD92D916EF6BBC00347D4B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		11DD92DC16EF6BBC00347D4B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		11DD92DD16EF6BBC00347D4B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		11DD92DE16EF6BBC00347D4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		11DD92E116EF6BBC00347D4B /* RedmineClient-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RedmineClient-Info.plist"; sourceTree = "<group>"; };
+		11DD92E316EF6BBC00347D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11DD92E516EF6BBC00347D4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11DD92E716EF6BBC00347D4B /* RedmineClient-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedmineClient-Prefix.pch"; sourceTree = "<group>"; };
+		11DD92E916EF6BBC00347D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		11DD92EB16EF6BBC00347D4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		11DD92EC16EF6BBC00347D4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		11DD92EF16EF6BBD00347D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		11DD92F616EF6BBD00347D4B /* RedmineClientTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedmineClientTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11DD92F716EF6BBD00347D4B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		11DD92FE16EF6BBD00347D4B /* RedmineClientTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RedmineClientTests-Info.plist"; sourceTree = "<group>"; };
+		11DD930016EF6BBD00347D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11DD930216EF6BBD00347D4B /* RedmineClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedmineClientTests.h; sourceTree = "<group>"; };
+		11DD930316EF6BBD00347D4B /* RedmineClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedmineClientTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11DD92D216EF6BBC00347D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD92DA16EF6BBC00347D4B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11DD92F216EF6BBD00347D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD92F816EF6BBD00347D4B /* SenTestingKit.framework in Frameworks */,
+				11DD92F916EF6BBD00347D4B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11DD92CA16EF6BBC00347D4B = {
+			isa = PBXGroup;
+			children = (
+				11DD92DF16EF6BBC00347D4B /* RedmineClient */,
+				11DD92FC16EF6BBD00347D4B /* RedmineClientTests */,
+				11DD92D816EF6BBC00347D4B /* Frameworks */,
+				11DD92D616EF6BBC00347D4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11DD92D616EF6BBC00347D4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92D516EF6BBC00347D4B /* RedmineClient.app */,
+				11DD92F616EF6BBD00347D4B /* RedmineClientTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11DD92D816EF6BBC00347D4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92D916EF6BBC00347D4B /* Cocoa.framework */,
+				11DD92F716EF6BBD00347D4B /* SenTestingKit.framework */,
+				11DD92DB16EF6BBC00347D4B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11DD92DB16EF6BBC00347D4B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92DC16EF6BBC00347D4B /* AppKit.framework */,
+				11DD92DD16EF6BBC00347D4B /* CoreData.framework */,
+				11DD92DE16EF6BBC00347D4B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		11DD92DF16EF6BBC00347D4B /* RedmineClient */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92EB16EF6BBC00347D4B /* AppDelegate.h */,
+				11DD92EC16EF6BBC00347D4B /* AppDelegate.m */,
+				11DD92EE16EF6BBD00347D4B /* MainMenu.xib */,
+				11DD92E016EF6BBC00347D4B /* Supporting Files */,
+			);
+			path = RedmineClient;
+			sourceTree = "<group>";
+		};
+		11DD92E016EF6BBC00347D4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92E116EF6BBC00347D4B /* RedmineClient-Info.plist */,
+				11DD92E216EF6BBC00347D4B /* InfoPlist.strings */,
+				11DD92E516EF6BBC00347D4B /* main.m */,
+				11DD92E716EF6BBC00347D4B /* RedmineClient-Prefix.pch */,
+				11DD92E816EF6BBC00347D4B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11DD92FC16EF6BBD00347D4B /* RedmineClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				11DD930216EF6BBD00347D4B /* RedmineClientTests.h */,
+				11DD930316EF6BBD00347D4B /* RedmineClientTests.m */,
+				11DD92FD16EF6BBD00347D4B /* Supporting Files */,
+			);
+			path = RedmineClientTests;
+			sourceTree = "<group>";
+		};
+		11DD92FD16EF6BBD00347D4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11DD92FE16EF6BBD00347D4B /* RedmineClientTests-Info.plist */,
+				11DD92FF16EF6BBD00347D4B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11DD92D416EF6BBC00347D4B /* RedmineClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11DD930716EF6BBD00347D4B /* Build configuration list for PBXNativeTarget "RedmineClient" */;
+			buildPhases = (
+				11DD92D116EF6BBC00347D4B /* Sources */,
+				11DD92D216EF6BBC00347D4B /* Frameworks */,
+				11DD92D316EF6BBC00347D4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedmineClient;
+			productName = RedmineClient;
+			productReference = 11DD92D516EF6BBC00347D4B /* RedmineClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11DD92F516EF6BBD00347D4B /* RedmineClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11DD930A16EF6BBD00347D4B /* Build configuration list for PBXNativeTarget "RedmineClientTests" */;
+			buildPhases = (
+				11DD92F116EF6BBD00347D4B /* Sources */,
+				11DD92F216EF6BBD00347D4B /* Frameworks */,
+				11DD92F316EF6BBD00347D4B /* Resources */,
+				11DD92F416EF6BBD00347D4B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11DD92FB16EF6BBD00347D4B /* PBXTargetDependency */,
+			);
+			name = RedmineClientTests;
+			productName = RedmineClientTests;
+			productReference = 11DD92F616EF6BBD00347D4B /* RedmineClientTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11DD92CC16EF6BBC00347D4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Alexander;
+			};
+			buildConfigurationList = 11DD92CF16EF6BBC00347D4B /* Build configuration list for PBXProject "RedmineClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 11DD92CA16EF6BBC00347D4B;
+			productRefGroup = 11DD92D616EF6BBC00347D4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11DD92D416EF6BBC00347D4B /* RedmineClient */,
+				11DD92F516EF6BBD00347D4B /* RedmineClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11DD92D316EF6BBC00347D4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD92E416EF6BBC00347D4B /* InfoPlist.strings in Resources */,
+				11DD92EA16EF6BBC00347D4B /* Credits.rtf in Resources */,
+				11DD92F016EF6BBD00347D4B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11DD92F316EF6BBD00347D4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD930116EF6BBD00347D4B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11DD92F416EF6BBD00347D4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11DD92D116EF6BBC00347D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD92E616EF6BBC00347D4B /* main.m in Sources */,
+				11DD92ED16EF6BBC00347D4B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11DD92F116EF6BBD00347D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11DD930416EF6BBD00347D4B /* RedmineClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11DD92FB16EF6BBD00347D4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11DD92D416EF6BBC00347D4B /* RedmineClient */;
+			targetProxy = 11DD92FA16EF6BBD00347D4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11DD92E216EF6BBC00347D4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11DD92E316EF6BBC00347D4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		11DD92E816EF6BBC00347D4B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11DD92E916EF6BBC00347D4B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		11DD92EE16EF6BBD00347D4B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11DD92EF16EF6BBD00347D4B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		11DD92FF16EF6BBD00347D4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11DD930016EF6BBD00347D4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11DD930516EF6BBD00347D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		11DD930616EF6BBD00347D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		11DD930816EF6BBD00347D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RedmineClient/RedmineClient-Prefix.pch";
+				INFOPLIST_FILE = "RedmineClient/RedmineClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		11DD930916EF6BBD00347D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RedmineClient/RedmineClient-Prefix.pch";
+				INFOPLIST_FILE = "RedmineClient/RedmineClient-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		11DD930B16EF6BBD00347D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/Contents/MacOS/RedmineClient";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RedmineClient/RedmineClient-Prefix.pch";
+				INFOPLIST_FILE = "RedmineClientTests/RedmineClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		11DD930C16EF6BBD00347D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RedmineClient.app/Contents/MacOS/RedmineClient";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RedmineClient/RedmineClient-Prefix.pch";
+				INFOPLIST_FILE = "RedmineClientTests/RedmineClientTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11DD92CF16EF6BBC00347D4B /* Build configuration list for PBXProject "RedmineClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11DD930516EF6BBD00347D4B /* Debug */,
+				11DD930616EF6BBD00347D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11DD930716EF6BBD00347D4B /* Build configuration list for PBXNativeTarget "RedmineClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11DD930816EF6BBD00347D4B /* Debug */,
+				11DD930916EF6BBD00347D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		11DD930A16EF6BBD00347D4B /* Build configuration list for PBXNativeTarget "RedmineClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11DD930B16EF6BBD00347D4B /* Debug */,
+				11DD930C16EF6BBD00347D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11DD92CC16EF6BBC00347D4B /* Project object */;
+}
