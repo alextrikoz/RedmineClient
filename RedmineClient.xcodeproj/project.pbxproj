@@ -17,6 +17,33 @@
 		11DD92F916EF6BBD00347D4B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DD92D916EF6BBC00347D4B /* Cocoa.framework */; };
 		11DD930116EF6BBD00347D4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11DD92FF16EF6BBD00347D4B /* InfoPlist.strings */; };
 		11DD930416EF6BBD00347D4B /* RedmineClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD930316EF6BBD00347D4B /* RedmineClientTests.m */; };
+		11DD932116EF6BED00347D4B /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD930F16EF6BED00347D4B /* AFHTTPClient.m */; };
+		11DD932216EF6BED00347D4B /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931116EF6BED00347D4B /* AFHTTPRequestOperation.m */; };
+		11DD932316EF6BED00347D4B /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931316EF6BED00347D4B /* AFImageRequestOperation.m */; };
+		11DD932416EF6BED00347D4B /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931516EF6BED00347D4B /* AFJSONRequestOperation.m */; };
+		11DD932516EF6BED00347D4B /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931716EF6BED00347D4B /* AFNetworkActivityIndicatorManager.m */; };
+		11DD932616EF6BED00347D4B /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931A16EF6BED00347D4B /* AFPropertyListRequestOperation.m */; };
+		11DD932716EF6BED00347D4B /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931C16EF6BED00347D4B /* AFURLConnectionOperation.m */; };
+		11DD932816EF6BED00347D4B /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD931E16EF6BED00347D4B /* AFXMLRequestOperation.m */; };
+		11DD932916EF6BED00347D4B /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD932016EF6BED00347D4B /* UIImageView+AFNetworking.m */; };
+		11DD933216EF6C1800347D4B /* RedmineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD932F16EF6C1800347D4B /* RedmineClient.m */; };
+		11DD933416EF6C8F00347D4B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DD933316EF6C8F00347D4B /* SystemConfiguration.framework */; };
+		11DD934E16EF6E5700347D4B /* AssignedTo.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD933B16EF6E5700347D4B /* AssignedTo.m */; };
+		11DD934F16EF6E5700347D4B /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD933D16EF6E5700347D4B /* Author.m */; };
+		11DD935016EF6E5700347D4B /* FixedVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD933F16EF6E5700347D4B /* FixedVersion.m */; };
+		11DD935116EF6E5700347D4B /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934116EF6E5700347D4B /* Issue.m */; };
+		11DD935316EF6E5700347D4B /* IssuesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934516EF6E5700347D4B /* IssuesResponse.m */; };
+		11DD935416EF6E5700347D4B /* Priority.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934716EF6E5700347D4B /* Priority.m */; };
+		11DD935516EF6E5700347D4B /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934916EF6E5700347D4B /* Project.m */; };
+		11DD935616EF6E5700347D4B /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934B16EF6E5700347D4B /* Status.m */; };
+		11DD935716EF6E5700347D4B /* Tracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD934D16EF6E5700347D4B /* Tracker.m */; };
+		11DD935B16EF715500347D4B /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11DD935916EF715400347D4B /* MainController.m */; };
+		11DD935C16EF715500347D4B /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11DD935A16EF715500347D4B /* MainController.xib */; };
+		11DD939116EF7C5200347D4B /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939016EF7C5200347D4B /* time.png */; };
+		11DD939316EF7CB300347D4B /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939216EF7CB300347D4B /* refresh.png */; };
+		11DD939516EF7D0500347D4B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939416EF7D0500347D4B /* user.png */; };
+		21AF964F16FB0057003FBCEE /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AF964D16FB0057003FBCEE /* PreferencesController.m */; };
+		21AF965016FB0057003FBCEE /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AF964E16FB0057003FBCEE /* PreferencesController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +76,55 @@
 		11DD930016EF6BBD00347D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11DD930216EF6BBD00347D4B /* RedmineClientTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedmineClientTests.h; sourceTree = "<group>"; };
 		11DD930316EF6BBD00347D4B /* RedmineClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedmineClientTests.m; sourceTree = "<group>"; };
+		11DD930E16EF6BED00347D4B /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		11DD930F16EF6BED00347D4B /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		11DD931016EF6BED00347D4B /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		11DD931116EF6BED00347D4B /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		11DD931216EF6BED00347D4B /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		11DD931316EF6BED00347D4B /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		11DD931416EF6BED00347D4B /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		11DD931516EF6BED00347D4B /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		11DD931616EF6BED00347D4B /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		11DD931716EF6BED00347D4B /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		11DD931816EF6BED00347D4B /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		11DD931916EF6BED00347D4B /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		11DD931A16EF6BED00347D4B /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		11DD931B16EF6BED00347D4B /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		11DD931C16EF6BED00347D4B /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		11DD931D16EF6BED00347D4B /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		11DD931E16EF6BED00347D4B /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		11DD931F16EF6BED00347D4B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		11DD932016EF6BED00347D4B /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		11DD932E16EF6C1800347D4B /* RedmineClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedmineClient.h; sourceTree = "<group>"; };
+		11DD932F16EF6C1800347D4B /* RedmineClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedmineClient.m; sourceTree = "<group>"; };
+		11DD933316EF6C8F00347D4B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		11DD933A16EF6E5700347D4B /* AssignedTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssignedTo.h; sourceTree = "<group>"; };
+		11DD933B16EF6E5700347D4B /* AssignedTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssignedTo.m; sourceTree = "<group>"; };
+		11DD933C16EF6E5700347D4B /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Author.h; sourceTree = "<group>"; };
+		11DD933D16EF6E5700347D4B /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Author.m; sourceTree = "<group>"; };
+		11DD933E16EF6E5700347D4B /* FixedVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedVersion.h; sourceTree = "<group>"; };
+		11DD933F16EF6E5700347D4B /* FixedVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedVersion.m; sourceTree = "<group>"; };
+		11DD934016EF6E5700347D4B /* Issue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Issue.h; sourceTree = "<group>"; };
+		11DD934116EF6E5700347D4B /* Issue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue.m; sourceTree = "<group>"; };
+		11DD934416EF6E5700347D4B /* IssuesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssuesResponse.h; sourceTree = "<group>"; };
+		11DD934516EF6E5700347D4B /* IssuesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssuesResponse.m; sourceTree = "<group>"; };
+		11DD934616EF6E5700347D4B /* Priority.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Priority.h; sourceTree = "<group>"; };
+		11DD934716EF6E5700347D4B /* Priority.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Priority.m; sourceTree = "<group>"; };
+		11DD934816EF6E5700347D4B /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		11DD934916EF6E5700347D4B /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		11DD934A16EF6E5700347D4B /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		11DD934B16EF6E5700347D4B /* Status.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Status.m; sourceTree = "<group>"; };
+		11DD934C16EF6E5700347D4B /* Tracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracker.h; sourceTree = "<group>"; };
+		11DD934D16EF6E5700347D4B /* Tracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tracker.m; sourceTree = "<group>"; };
+		11DD935816EF715400347D4B /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		11DD935916EF715400347D4B /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		11DD935A16EF715500347D4B /* MainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		11DD939016EF7C5200347D4B /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
+		11DD939216EF7CB300347D4B /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		11DD939416EF7D0500347D4B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		21AF964C16FB0057003FBCEE /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		21AF964D16FB0057003FBCEE /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
+		21AF964E16FB0057003FBCEE /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DD933416EF6C8F00347D4B /* SystemConfiguration.framework in Frameworks */,
 				11DD92DA16EF6BBC00347D4B /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +152,7 @@
 		11DD92CA16EF6BBC00347D4B = {
 			isa = PBXGroup;
 			children = (
+				11DD930D16EF6BED00347D4B /* AFNetworking */,
 				11DD92DF16EF6BBC00347D4B /* RedmineClient */,
 				11DD92FC16EF6BBD00347D4B /* RedmineClientTests */,
 				11DD92D816EF6BBC00347D4B /* Frameworks */,
@@ -94,6 +172,7 @@
 		11DD92D816EF6BBC00347D4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11DD933316EF6C8F00347D4B /* SystemConfiguration.framework */,
 				11DD92D916EF6BBC00347D4B /* Cocoa.framework */,
 				11DD92F716EF6BBD00347D4B /* SenTestingKit.framework */,
 				11DD92DB16EF6BBC00347D4B /* Other Frameworks */,
@@ -114,6 +193,16 @@
 		11DD92DF16EF6BBC00347D4B /* RedmineClient */ = {
 			isa = PBXGroup;
 			children = (
+				11DD933916EF6E5700347D4B /* Models */,
+				11DD938F16EF7C5100347D4B /* Images */,
+				11DD932E16EF6C1800347D4B /* RedmineClient.h */,
+				11DD932F16EF6C1800347D4B /* RedmineClient.m */,
+				11DD935816EF715400347D4B /* MainController.h */,
+				11DD935916EF715400347D4B /* MainController.m */,
+				11DD935A16EF715500347D4B /* MainController.xib */,
+				21AF964C16FB0057003FBCEE /* PreferencesController.h */,
+				21AF964D16FB0057003FBCEE /* PreferencesController.m */,
+				21AF964E16FB0057003FBCEE /* PreferencesController.xib */,
 				11DD92EB16EF6BBC00347D4B /* AppDelegate.h */,
 				11DD92EC16EF6BBC00347D4B /* AppDelegate.m */,
 				11DD92EE16EF6BBD00347D4B /* MainMenu.xib */,
@@ -152,6 +241,67 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		11DD930D16EF6BED00347D4B /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				11DD930E16EF6BED00347D4B /* AFHTTPClient.h */,
+				11DD930F16EF6BED00347D4B /* AFHTTPClient.m */,
+				11DD931016EF6BED00347D4B /* AFHTTPRequestOperation.h */,
+				11DD931116EF6BED00347D4B /* AFHTTPRequestOperation.m */,
+				11DD931216EF6BED00347D4B /* AFImageRequestOperation.h */,
+				11DD931316EF6BED00347D4B /* AFImageRequestOperation.m */,
+				11DD931416EF6BED00347D4B /* AFJSONRequestOperation.h */,
+				11DD931516EF6BED00347D4B /* AFJSONRequestOperation.m */,
+				11DD931616EF6BED00347D4B /* AFNetworkActivityIndicatorManager.h */,
+				11DD931716EF6BED00347D4B /* AFNetworkActivityIndicatorManager.m */,
+				11DD931816EF6BED00347D4B /* AFNetworking.h */,
+				11DD931916EF6BED00347D4B /* AFPropertyListRequestOperation.h */,
+				11DD931A16EF6BED00347D4B /* AFPropertyListRequestOperation.m */,
+				11DD931B16EF6BED00347D4B /* AFURLConnectionOperation.h */,
+				11DD931C16EF6BED00347D4B /* AFURLConnectionOperation.m */,
+				11DD931D16EF6BED00347D4B /* AFXMLRequestOperation.h */,
+				11DD931E16EF6BED00347D4B /* AFXMLRequestOperation.m */,
+				11DD931F16EF6BED00347D4B /* UIImageView+AFNetworking.h */,
+				11DD932016EF6BED00347D4B /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		11DD933916EF6E5700347D4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11DD933A16EF6E5700347D4B /* AssignedTo.h */,
+				11DD933B16EF6E5700347D4B /* AssignedTo.m */,
+				11DD933C16EF6E5700347D4B /* Author.h */,
+				11DD933D16EF6E5700347D4B /* Author.m */,
+				11DD933E16EF6E5700347D4B /* FixedVersion.h */,
+				11DD933F16EF6E5700347D4B /* FixedVersion.m */,
+				11DD934016EF6E5700347D4B /* Issue.h */,
+				11DD934116EF6E5700347D4B /* Issue.m */,
+				11DD934416EF6E5700347D4B /* IssuesResponse.h */,
+				11DD934516EF6E5700347D4B /* IssuesResponse.m */,
+				11DD934616EF6E5700347D4B /* Priority.h */,
+				11DD934716EF6E5700347D4B /* Priority.m */,
+				11DD934816EF6E5700347D4B /* Project.h */,
+				11DD934916EF6E5700347D4B /* Project.m */,
+				11DD934A16EF6E5700347D4B /* Status.h */,
+				11DD934B16EF6E5700347D4B /* Status.m */,
+				11DD934C16EF6E5700347D4B /* Tracker.h */,
+				11DD934D16EF6E5700347D4B /* Tracker.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11DD938F16EF7C5100347D4B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				11DD939416EF7D0500347D4B /* user.png */,
+				11DD939216EF7CB300347D4B /* refresh.png */,
+				11DD939016EF7C5200347D4B /* time.png */,
+			);
+			path = Images;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -227,6 +377,11 @@
 				11DD92E416EF6BBC00347D4B /* InfoPlist.strings in Resources */,
 				11DD92EA16EF6BBC00347D4B /* Credits.rtf in Resources */,
 				11DD92F016EF6BBD00347D4B /* MainMenu.xib in Resources */,
+				11DD935C16EF715500347D4B /* MainController.xib in Resources */,
+				11DD939116EF7C5200347D4B /* time.png in Resources */,
+				11DD939316EF7CB300347D4B /* refresh.png in Resources */,
+				11DD939516EF7D0500347D4B /* user.png in Resources */,
+				21AF965016FB0057003FBCEE /* PreferencesController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +418,27 @@
 			files = (
 				11DD92E616EF6BBC00347D4B /* main.m in Sources */,
 				11DD92ED16EF6BBC00347D4B /* AppDelegate.m in Sources */,
+				11DD932116EF6BED00347D4B /* AFHTTPClient.m in Sources */,
+				11DD932216EF6BED00347D4B /* AFHTTPRequestOperation.m in Sources */,
+				11DD932316EF6BED00347D4B /* AFImageRequestOperation.m in Sources */,
+				11DD932416EF6BED00347D4B /* AFJSONRequestOperation.m in Sources */,
+				11DD932516EF6BED00347D4B /* AFNetworkActivityIndicatorManager.m in Sources */,
+				11DD932616EF6BED00347D4B /* AFPropertyListRequestOperation.m in Sources */,
+				11DD932716EF6BED00347D4B /* AFURLConnectionOperation.m in Sources */,
+				11DD932816EF6BED00347D4B /* AFXMLRequestOperation.m in Sources */,
+				11DD932916EF6BED00347D4B /* UIImageView+AFNetworking.m in Sources */,
+				11DD933216EF6C1800347D4B /* RedmineClient.m in Sources */,
+				11DD934E16EF6E5700347D4B /* AssignedTo.m in Sources */,
+				11DD934F16EF6E5700347D4B /* Author.m in Sources */,
+				11DD935016EF6E5700347D4B /* FixedVersion.m in Sources */,
+				11DD935116EF6E5700347D4B /* Issue.m in Sources */,
+				11DD935316EF6E5700347D4B /* IssuesResponse.m in Sources */,
+				11DD935416EF6E5700347D4B /* Priority.m in Sources */,
+				11DD935516EF6E5700347D4B /* Project.m in Sources */,
+				11DD935616EF6E5700347D4B /* Status.m in Sources */,
+				11DD935716EF6E5700347D4B /* Tracker.m in Sources */,
+				11DD935B16EF715500347D4B /* MainController.m in Sources */,
+				21AF964F16FB0057003FBCEE /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +622,7 @@
 				11DD930916EF6BBD00347D4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11DD930A16EF6BBD00347D4B /* Build configuration list for PBXNativeTarget "RedmineClientTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +631,7 @@
 				11DD930C16EF6BBD00347D4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

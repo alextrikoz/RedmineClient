@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MainController.h
 //  RedmineClient
 //
 //  Created by Alexander on 12.03.13.
@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface MainController : NSWindowController
 
 @end

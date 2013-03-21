@@ -8,11 +8,50 @@
 
 #import "AppDelegate.h"
 
+#import "RedmineClient.h"
+#import "MainController.h"
+#import "PreferencesController.h"
+
+@interface AppDelegate ()
+
+@property (readonly) PreferencesController *preferencesController;
+@property (readonly) MainController *mainController;
+
+- (IBAction)preferences:(id)sender;
+
+@end
+
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    // Insert code here to initialize your application
+@synthesize preferencesController = _preferencesController;
+- (PreferencesController *)preferencesController {
+    if(!_preferencesController) {
+        _preferencesController = [[PreferencesController alloc] initWithWindowNibName:@"PreferencesController"];
+    }
+    return _preferencesController;
+}
+
+@synthesize mainController = _mainController;
+- (MainController *)mainController {
+    if(!_mainController) {
+        _mainController = [[MainController alloc] initWithWindowNibName:@"MainController"];
+    }
+    return _mainController;
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self.mainController.window makeKeyAndOrderFront:nil];
+}
+
+- (BOOL)applicationShouldHandleReopen:(NSApplication *)sender hasVisibleWindows:(BOOL)flag {
+    if(!flag) {
+        [self.mainController.window makeKeyAndOrderFront:nil];
+    }
+    return YES;
+}
+
+- (IBAction)preferences:(id)sender {
+    [self.preferencesController.window makeKeyAndOrderFront:nil];
 }
 
 @end
