@@ -13,6 +13,8 @@
 @property (copy, nonatomic) NSString *name;
 @property (strong, nonatomic) NSNumber *id;
 
+@property (strong, nonatomic) NSMutableArray *children;
+
 - (void)setAttributesWithDictionary:(NSDictionary *)dictionary;
 - (Project *)initWithDictionary:(NSDictionary *)dictionary;
 + (Project *)objectWithDictionary:(NSDictionary *)dictionary;
