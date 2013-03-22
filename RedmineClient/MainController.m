@@ -29,7 +29,7 @@
 - (IBAction)refresh:(id)sender {
     self.issues = nil;
     
-    NSNumber *assigned_to_id = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:@"assigned_to_id"];
+    NSString *assigned_to_id = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:@"assigned_to_id"];
     NSNumber *limit = [[[NSUserDefaultsController sharedUserDefaultsController] values] valueForKey:@"limit"];
     
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
