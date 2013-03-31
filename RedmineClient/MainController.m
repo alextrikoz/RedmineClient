@@ -12,6 +12,7 @@
 #import "Issue.h"
 #import "Project.h"
 
+
 @interface MainController ()
 
 @property IBOutlet NSOutlineView *outlineView;
@@ -81,6 +82,11 @@
         return [item id];
     } else if ([tableColumn.identifier isEqualToString:@"subject"]) {
         return [item subject];
+    } else if ([tableColumn.identifier isEqualToString:@"priority"]) {
+        Priority *priority = [(Issue *)item priority];
+        return priority.name;
+    } else if ([tableColumn.identifier isEqualToString:@"created_on"]) {
+        return [item created_on];
     } else {
         return nil;
     }
@@ -97,4 +103,14 @@
     return [item isKindOfClass:[Project class]];
 }
 
+- (void)outlineView:(NSOutlineView *)outlineView sortDescriptorsDidChange:(NSArray *)oldDescriptors
+{
+    NSLog(@"%@", oldDescriptors);
+    NSArray *newDescriptors = [self.outlineView sortDescriptors];
+    for (Project *project in self.projects) {
+        NSArray *issues = project.children;
+        project.children = [[issues sortedArrayUsingDescriptors:newDescriptors] mutableCopy];
+    }
+    [self.outlineView reloadData];
+}
 @end

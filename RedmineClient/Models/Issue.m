@@ -11,7 +11,6 @@
 #import "AssignedTo.h"
 #import "Project.h"
 #import "Author.h"
-#import "Priority.h"
 #import "Tracker.h"
 #import "Status.h"
 #import "FixedVersion.h"

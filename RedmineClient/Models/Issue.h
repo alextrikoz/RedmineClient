@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Priority.h"
 
 @class AssignedTo;
 @class Project;
 @class Author;
-@class Priority;
 @class Tracker;
 @class Status;
 @class FixedVersion;

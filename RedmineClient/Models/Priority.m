@@ -38,4 +38,14 @@
     return objects;
 }
 
+- (NSComparisonResult)caseInsensitiveCompare:(NSString *)aString
+{
+    return [self.name caseInsensitiveCompare:aString];
+}
+
+- (NSUInteger)lenght
+{
+    return [self.name length];
+}
+
 @end
