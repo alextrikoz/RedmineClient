@@ -32,6 +32,22 @@
     [self refresh:nil];
 }
 
+#pragma mark - Button Actions
+
+- (IBAction)bulkMyTime:(id)sender {
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Time Distribution"];
+    [alert setInformativeText:@"#123456 Issue - ...\n#123456 Issue - ..."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert beginSheetModalForWindow:[[NSApplication sharedApplication] mainWindow]
+                      modalDelegate:self
+                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
+                        contextInfo:nil];
+}
+
 - (IBAction)refresh:(id)sender {
     self.issues = nil;
     [RedmineClient issuesWithParameters:@{@"assigned_to_id":@"me", @"limit":@100} success:^(IssuesResponse *issuesResponse) {
@@ -57,6 +73,15 @@
         [self.outlineView reloadData];
     }];
 }
+
+#pragma mark - NSAlert
+
+- (void)alertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+    
+}
+
+#pragma mark - OutlineView
 
 - (NSArray *)childrenForItem:(id)item {
     return (item == nil) ? self.projects : [item children];
