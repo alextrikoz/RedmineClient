@@ -10,16 +10,21 @@
 #import "RedmineClient.h"
 #import "IssuesResponse.h"
 #import "Issue.h"
+#import "Author.h"
 #import "Project.h"
+#import "Priority.h"
+#import "ItemProxy.h"
 
 @interface MainController ()
 
+@property IBOutlet NSSegmentedControl *segmentedControl;
 @property IBOutlet NSOutlineView *outlineView;
 
 @property NSMutableArray *issues;
-@property NSMutableArray *projects;
+@property NSMutableArray *groups;
 
 - (IBAction)refresh:(id)sender;
+- (IBAction)select:(id)sender;
 
 @end
 
@@ -35,30 +40,60 @@
     self.issues = nil;
     [RedmineClient issuesWithParameters:@{@"assigned_to_id":@"me", @"limit":@100} success:^(IssuesResponse *issuesResponse) {
         self.issues = issuesResponse.issues;
-        
-        self.projects = [NSMutableArray array];
-        for (Issue *issue in self.issues) {
-            Project *detectedProject = nil;
-            for (Project *project in self.projects) {
-                if ([project.name isEqualToString:issue.project.name]) {
-                    detectedProject = project;
-                }
-            }
-            if (detectedProject == nil) {
-                detectedProject = [Project new];
-                detectedProject.name = issue.project.name;
-                detectedProject.children = [NSMutableArray array];
-                [self.projects addObject:detectedProject];
-            }
-            [detectedProject.children addObject:issue];
-        }
-        
-        [self.outlineView reloadData];
+        [self select:self.segmentedControl];
     }];
 }
 
-- (NSArray *)childrenForItem:(id)item {
-    return (item == nil) ? self.projects : [item children];
+- (IBAction)select:(NSSegmentedControl *)sender {
+    self.groups = [NSMutableArray array];
+    for (Issue *issue in self.issues) {
+        ItemProxy *detectedItem = nil;
+        for (ItemProxy *group in self.groups) {
+            switch (sender.selectedSegment) {
+                case 0:
+                    if ([group.name isEqualToString:issue.project.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                case 1:
+                    if ([group.name isEqualToString:issue.author.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                case 2:
+                    if ([group.name isEqualToString:issue.priority.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (detectedItem == nil) {
+            switch (sender.selectedSegment) {
+                case 0:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.project];
+                    break;
+                case 1:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.author];
+                    break;
+                case 2:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.priority];
+                    break;
+                default:
+                    break;
+            }
+            [self.groups addObject:detectedItem];
+        }
+        ItemProxy *proxy = [[ItemProxy alloc] initWithItem:issue];
+        [detectedItem.children addObject:proxy];
+    }
+    
+    [self.outlineView reloadData];
+}
+
+- (NSArray *)childrenForItem:(ItemProxy *)item {
+    return (item == nil) ? self.groups : [item children];
 }
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
@@ -70,7 +105,7 @@
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    return [item isKindOfClass:[Project class]];
+    return [item isItemExpandable];
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
@@ -78,7 +113,7 @@
         return [item name];
     }
     if ([tableColumn.identifier isEqualToString:@"number"]) {
-        return [item id];
+        return [item number];
     } else if ([tableColumn.identifier isEqualToString:@"subject"]) {
         return [item subject];
     } else {
@@ -87,14 +122,14 @@
 }
 
 - (NSCell *)outlineView:(NSOutlineView *)outlineView dataCellForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
-    if ([item isKindOfClass:[Project class]]) {
+    if ([item isItemExpandable]) {
         return [[self.outlineView tableColumnWithIdentifier:@"number"] dataCell];
     }
     return [tableColumn dataCell];
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item {
-    return [item isKindOfClass:[Project class]];
+    return [item isItemExpandable];
 }
 
 @end

@@ -42,6 +42,7 @@
 		11DD939116EF7C5200347D4B /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939016EF7C5200347D4B /* time.png */; };
 		11DD939316EF7CB300347D4B /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939216EF7CB300347D4B /* refresh.png */; };
 		11DD939516EF7D0500347D4B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 11DD939416EF7D0500347D4B /* user.png */; };
+		21399A51170B24B900F4D364 /* ItemProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21399A50170B24B900F4D364 /* ItemProxy.m */; };
 		21AF964F16FB0057003FBCEE /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AF964D16FB0057003FBCEE /* PreferencesController.m */; };
 		21AF965016FB0057003FBCEE /* PreferencesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21AF964E16FB0057003FBCEE /* PreferencesController.xib */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,8 @@
 		11DD939016EF7C5200347D4B /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		11DD939216EF7CB300347D4B /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		11DD939416EF7D0500347D4B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		21399A4F170B24B900F4D364 /* ItemProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemProxy.h; sourceTree = "<group>"; };
+		21399A50170B24B900F4D364 /* ItemProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemProxy.m; sourceTree = "<group>"; };
 		21AF964C16FB0057003FBCEE /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		21AF964D16FB0057003FBCEE /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		21AF964E16FB0057003FBCEE /* PreferencesController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesController.xib; sourceTree = "<group>"; };
@@ -194,7 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				11DD933916EF6E5700347D4B /* Models */,
-				11DD938F16EF7C5100347D4B /* Images */,
+				21399A4F170B24B900F4D364 /* ItemProxy.h */,
+				21399A50170B24B900F4D364 /* ItemProxy.m */,
 				11DD932E16EF6C1800347D4B /* RedmineClient.h */,
 				11DD932F16EF6C1800347D4B /* RedmineClient.m */,
 				11DD935816EF715400347D4B /* MainController.h */,
@@ -206,6 +210,7 @@
 				11DD92EB16EF6BBC00347D4B /* AppDelegate.h */,
 				11DD92EC16EF6BBC00347D4B /* AppDelegate.m */,
 				11DD92EE16EF6BBD00347D4B /* MainMenu.xib */,
+				11DD938F16EF7C5100347D4B /* Images */,
 				11DD92E016EF6BBC00347D4B /* Supporting Files */,
 			);
 			path = RedmineClient;
@@ -439,6 +444,7 @@
 				11DD935716EF6E5700347D4B /* Tracker.m in Sources */,
 				11DD935B16EF715500347D4B /* MainController.m in Sources */,
 				21AF964F16FB0057003FBCEE /* PreferencesController.m in Sources */,
+				21399A51170B24B900F4D364 /* ItemProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
