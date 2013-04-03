@@ -142,6 +142,23 @@
         [detectedItem.children addObject:proxy];
     }
     
+    BOOL ascending;
+    switch (sender.selectedSegment) {
+        case 0:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        default:
+            ascending = YES;
+            break;
+        case 1:
+        case 6:
+            ascending = NO;
+            break;
+    }
+    [self.groups sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"name" ascending:ascending]]];
+    
     [self.outlineView reloadData];
     
     for (int i = 0; i < self.outlineView.numberOfRows; i++) {
