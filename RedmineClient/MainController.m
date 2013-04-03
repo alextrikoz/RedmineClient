@@ -15,6 +15,7 @@
 #import "Priority.h"
 #import "Status.h"
 #import "ItemProxy.h"
+#import "Tracker.h"
 
 @interface MainController ()
 
@@ -68,12 +69,12 @@
         for (ItemProxy *group in self.groups) {
             switch (sender.selectedSegment) {
                 case 0:
-                    if ([group.name isEqualToString:issue.project.name]) {
+                    if ([group.name isEqualToString:issue.author.name]) {
                         detectedItem = group;
                     }
                     break;
                 case 1:
-                    if ([group.name isEqualToString:issue.author.name]) {
+                    if ([group.created_on isEqualToString:issue.created_on]) {
                         detectedItem = group;
                     }
                     break;
@@ -83,12 +84,22 @@
                     }
                     break;
                 case 3:
-                    if ([group.name isEqualToString:issue.status.name]) {
+                    if ([group.name isEqualToString:issue.project.name]) {
                         detectedItem = group;
                     }
                     break;
                 case 4:
-                    if ([group.created_on isEqualToString:issue.created_on]) {
+                    if ([group.name isEqualToString:issue.status.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                case 5:
+                    if ([group.name isEqualToString:issue.tracker.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                case 6:
+                    if ([group.updated_on isEqualToString:issue.updated_on]) {
                         detectedItem = group;
                     }
                     break;
@@ -99,20 +110,29 @@
         if (detectedItem == nil) {
             switch (sender.selectedSegment) {
                 case 0:
-                    detectedItem = [[ItemProxy alloc] initWithItem:issue.project];
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.author];
                     break;
                 case 1:
-                    detectedItem = [[ItemProxy alloc] initWithItem:issue.author];
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue];
+                    detectedItem.itemExpandable = YES;
+                    detectedItem.nameKey = @"created_on";
                     break;
                 case 2:
                     detectedItem = [[ItemProxy alloc] initWithItem:issue.priority];
                     break;
                 case 3:
-                    detectedItem = [[ItemProxy alloc] initWithItem:issue.status];
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.project];
                     break;
                 case 4:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.status];
+                    break;
+                case 5:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.tracker];
+                    break;
+                case 6:
                     detectedItem = [[ItemProxy alloc] initWithItem:issue];
                     detectedItem.itemExpandable = YES;
+                    detectedItem.nameKey = @"updated_on";
                     break;
                 default:
                     break;

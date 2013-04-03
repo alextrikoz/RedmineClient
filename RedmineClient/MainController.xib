@@ -45,7 +45,7 @@
 			<object class="NSWindowTemplate" id="1005">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{196, 240}, {480, 270}}</string>
+				<string key="NSWindowRect">{{196, 240}, {640, 500}}</string>
 				<int key="NSWTFlags">544735232</int>
 				<string key="NSWindowTitle">TimeBulker</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -71,9 +71,8 @@
 							<object class="NSSegmentedControl" key="NSToolbarItemView" id="335945147">
 								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{0, 14}, {348, 25}}</string>
+								<string key="NSFrame">{{0, 14}, {510, 25}}</string>
 								<reference key="NSSuperview"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
@@ -89,12 +88,11 @@
 									<reference key="NSControlView" ref="335945147"/>
 									<array class="NSMutableArray" key="NSSegmentImages">
 										<object class="NSSegmentItem">
-											<string key="NSSegmentItemLabel">project</string>
-											<bool key="NSSegmentItemSelected">YES</bool>
+											<string key="NSSegmentItemLabel">author</string>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 										<object class="NSSegmentItem">
-											<string key="NSSegmentItemLabel">author</string>
+											<string key="NSSegmentItemLabel">created_on</string>
 											<int key="NSSegmentItemTag">1</int>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
@@ -103,14 +101,24 @@
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 										<object class="NSSegmentItem">
+											<string key="NSSegmentItemLabel">project</string>
+											<bool key="NSSegmentItemSelected">YES</bool>
+											<int key="NSSegmentItemImageScaling">0</int>
+										</object>
+										<object class="NSSegmentItem">
 											<string key="NSSegmentItemLabel">status</string>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 										<object class="NSSegmentItem">
-											<string key="NSSegmentItemLabel">created_on</string>
+											<string key="NSSegmentItemLabel">tracker</string>
+											<int key="NSSegmentItemImageScaling">0</int>
+										</object>
+										<object class="NSSegmentItem">
+											<string key="NSSegmentItemLabel">updated_on</string>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 									</array>
+									<int key="NSSelectedSegment">3</int>
 									<int key="NSSegmentStyle">4</int>
 								</object>
 								<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -119,7 +127,7 @@
 							<nil key="NSToolbarItemTarget"/>
 							<nil key="NSToolbarItemAction"/>
 							<string key="NSToolbarItemMinSize">{100, 25}</string>
-							<string key="NSToolbarItemMaxSize">{348, 25}</string>
+							<string key="NSToolbarItemMaxSize">{510, 25}</string>
 							<bool key="NSToolbarItemEnabled">YES</bool>
 							<bool key="NSToolbarItemAutovalidates">YES</bool>
 							<int key="NSToolbarItemTag">0</int>
@@ -175,7 +183,7 @@
 										<object class="NSOutlineView" id="935085224">
 											<reference key="NSNextResponder" ref="888720478"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{973, 239}</string>
+											<string key="NSFrameSize">{973, 469}</string>
 											<reference key="NSSuperview" ref="888720478"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="724666491"/>
@@ -255,42 +263,9 @@
 													</object>
 													<int key="NSResizingMask">3</int>
 													<bool key="NSIsResizeable">YES</bool>
-													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="935085224"/>
 													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
 														<string key="NSKey">number</string>
-														<bool key="NSAscending">YES</bool>
-														<string key="NSSelector">compare:</string>
-													</object>
-												</object>
-												<object class="NSTableColumn" id="170151908">
-													<string key="NSIdentifier">priority</string>
-													<double key="NSWidth">100</double>
-													<double key="NSMinWidth">40</double>
-													<double key="NSMaxWidth">1000</double>
-													<object class="NSTableHeaderCell" key="NSHeaderCell">
-														<int key="NSCellFlags">75497536</int>
-														<int key="NSCellFlags2">2048</int>
-														<string key="NSContents">priority</string>
-														<reference key="NSSupport" ref="26"/>
-														<reference key="NSBackgroundColor" ref="886854925"/>
-														<reference key="NSTextColor" ref="336469598"/>
-													</object>
-													<object class="NSTextFieldCell" key="NSDataCell" id="14443947">
-														<int key="NSCellFlags">337641536</int>
-														<int key="NSCellFlags2">2048</int>
-														<string key="NSContents">Text Cell</string>
-														<reference key="NSSupport" ref="125272500"/>
-														<reference key="NSControlView" ref="935085224"/>
-														<reference key="NSBackgroundColor" ref="814615628"/>
-														<reference key="NSTextColor" ref="391093054"/>
-													</object>
-													<int key="NSResizingMask">3</int>
-													<bool key="NSIsResizeable">YES</bool>
-													<bool key="NSIsEditable">YES</bool>
-													<reference key="NSTableView" ref="935085224"/>
-													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
-														<string key="NSKey">priority</string>
 														<bool key="NSAscending">YES</bool>
 														<string key="NSSelector">compare:</string>
 													</object>
@@ -322,10 +297,40 @@
 													</object>
 													<int key="NSResizingMask">3</int>
 													<bool key="NSIsResizeable">YES</bool>
-													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="935085224"/>
 													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
 														<string key="NSKey">created_on</string>
+														<bool key="NSAscending">YES</bool>
+														<string key="NSSelector">compare:</string>
+													</object>
+												</object>
+												<object class="NSTableColumn" id="170151908">
+													<string key="NSIdentifier">priority</string>
+													<double key="NSWidth">100</double>
+													<double key="NSMinWidth">40</double>
+													<double key="NSMaxWidth">1000</double>
+													<object class="NSTableHeaderCell" key="NSHeaderCell">
+														<int key="NSCellFlags">75497536</int>
+														<int key="NSCellFlags2">2048</int>
+														<string key="NSContents">priority</string>
+														<reference key="NSSupport" ref="26"/>
+														<reference key="NSBackgroundColor" ref="886854925"/>
+														<reference key="NSTextColor" ref="336469598"/>
+													</object>
+													<object class="NSTextFieldCell" key="NSDataCell" id="14443947">
+														<int key="NSCellFlags">337641536</int>
+														<int key="NSCellFlags2">2048</int>
+														<string key="NSContents">Text Cell</string>
+														<reference key="NSSupport" ref="125272500"/>
+														<reference key="NSControlView" ref="935085224"/>
+														<reference key="NSBackgroundColor" ref="814615628"/>
+														<reference key="NSTextColor" ref="391093054"/>
+													</object>
+													<int key="NSResizingMask">3</int>
+													<bool key="NSIsResizeable">YES</bool>
+													<reference key="NSTableView" ref="935085224"/>
+													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
+														<string key="NSKey">priority</string>
 														<bool key="NSAscending">YES</bool>
 														<string key="NSSelector">compare:</string>
 													</object>
@@ -357,7 +362,6 @@
 													</object>
 													<int key="NSResizingMask">3</int>
 													<bool key="NSIsResizeable">YES</bool>
-													<bool key="NSIsEditable">YES</bool>
 													<reference key="NSTableView" ref="935085224"/>
 													<object class="NSSortDescriptor" key="NSSortDescriptorPrototype">
 														<string key="NSKey">subject</string>
@@ -394,7 +398,7 @@
 											<bool key="NSOutlineViewAutoresizesOutlineColumnKey">NO</bool>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 17}, {480, 239}}</string>
+									<string key="NSFrame">{{1, 17}, {640, 469}}</string>
 									<reference key="NSSuperview" ref="122421175"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="935085224"/>
@@ -419,7 +423,7 @@
 								<object class="NSScroller" id="449798514">
 									<reference key="NSNextResponder" ref="122421175"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{1, 256}, {480, 15}}</string>
+									<string key="NSFrame">{{1, 486}, {640, 15}}</string>
 									<reference key="NSSuperview" ref="122421175"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView"/>
@@ -429,7 +433,7 @@
 									<int key="NSsFlags">1</int>
 									<reference key="NSTarget" ref="122421175"/>
 									<string key="NSAction">_doScroller:</string>
-									<double key="NSPercent">0.49331963001027751</double>
+									<double key="NSPercent">0.65775950668036998</double>
 								</object>
 								<object class="NSClipView" id="563197948">
 									<reference key="NSNextResponder" ref="122421175"/>
@@ -437,7 +441,7 @@
 									<array class="NSMutableArray" key="NSSubviews">
 										<reference ref="695753337"/>
 									</array>
-									<string key="NSFrame">{{1, 0}, {480, 17}}</string>
+									<string key="NSFrame">{{1, 0}, {640, 17}}</string>
 									<reference key="NSSuperview" ref="122421175"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="695753337"/>
@@ -448,7 +452,7 @@
 								</object>
 								<reference ref="285160000"/>
 							</array>
-							<string key="NSFrame">{{-1, -1}, {482, 272}}</string>
+							<string key="NSFrame">{{-1, -1}, {642, 502}}</string>
 							<reference key="NSSuperview" ref="1006"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="563197948"/>
@@ -465,7 +469,7 @@
 							<double key="NSMagnification">1</double>
 						</object>
 					</array>
-					<string key="NSFrameSize">{480, 270}</string>
+					<string key="NSFrameSize">{640, 500}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="122421175"/>
@@ -731,7 +735,7 @@
 				<string key="69.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<integer value="4" key="82.IBNSSegmentedControlInspectorSelectedSegmentMetadataKey"/>
+				<integer value="3" key="82.IBNSSegmentedControlInspectorSelectedSegmentMetadataKey"/>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="86.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>

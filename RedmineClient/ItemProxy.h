@@ -16,11 +16,14 @@
 
 @property NSMutableArray *children;
 
+@property NSString *nameKey;
+
 @property (readonly) NSString *name;
 
 @property (readonly) NSString *number;
-@property (readonly) NSString *priority;
-@property (readonly) NSString *created_on;
 @property (readonly) NSString *subject;
+@property (readonly) NSString *created_on;
+@property (readonly) NSString *updated_on;
+@property (readonly) NSString *priority;
 
 @end
