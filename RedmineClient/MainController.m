@@ -13,8 +13,8 @@
 #import "Author.h"
 #import "Project.h"
 #import "Priority.h"
+#import "Status.h"
 #import "ItemProxy.h"
-
 
 @interface MainController ()
 
@@ -82,6 +82,16 @@
                         detectedItem = group;
                     }
                     break;
+                case 3:
+                    if ([group.name isEqualToString:issue.status.name]) {
+                        detectedItem = group;
+                    }
+                    break;
+                case 4:
+                    if ([group.created_on isEqualToString:issue.created_on]) {
+                        detectedItem = group;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -96,6 +106,13 @@
                     break;
                 case 2:
                     detectedItem = [[ItemProxy alloc] initWithItem:issue.priority];
+                    break;
+                case 3:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue.status];
+                    break;
+                case 4:
+                    detectedItem = [[ItemProxy alloc] initWithItem:issue];
+                    detectedItem.itemExpandable = YES;
                     break;
                 default:
                     break;

@@ -39,7 +39,11 @@
 }
 
 - (NSString *)name {
-    return [self.item valueForKey:@"name"];
+    NSString *name = [self.item valueForKey:@"name"];
+    if (!name) {
+        name = [self.item valueForKey:@"created_on"];
+    }
+    return name;
 }
 
 - (NSString *)number {

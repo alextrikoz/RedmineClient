@@ -42,7 +42,7 @@
     self.author = [Author objectWithDictionary:[dictionary objectForKey:AUTHOR_KEY]];
     self.done_ratio = [dictionary objectForKey:DONE_RATIO_KEY];
     self.id = [@"#" stringByAppendingFormat:@"%@", [dictionary objectForKey:ID_KEY]];
-    self.updated_on = [dictionary objectForKey:UPDATED_ON_KEY];
+    self.updated_on = [[dictionary objectForKey:UPDATED_ON_KEY] substringToIndex:10];
     self.start_date = [dictionary objectForKey:START_DATE_KEY];
     self.priority = [Priority objectWithDictionary:[dictionary objectForKey:PRIORITY_KEY]];
     self.created_on = [[dictionary objectForKey:CREATED_ON_KEY] substringToIndex:10];

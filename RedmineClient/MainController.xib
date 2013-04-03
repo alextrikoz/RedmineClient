@@ -69,9 +69,12 @@
 							<string key="NSToolbarItemPaletteLabel">Custom View</string>
 							<nil key="NSToolbarItemToolTip"/>
 							<object class="NSSegmentedControl" key="NSToolbarItemView" id="335945147">
-								<nil key="NSNextResponder"/>
+								<reference key="NSNextResponder"/>
 								<int key="NSvFlags">268</int>
-								<string key="NSFrame">{{0, 14}, {100, 25}}</string>
+								<string key="NSFrame">{{0, 14}, {348, 25}}</string>
+								<reference key="NSSuperview"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="NSEnabled">YES</bool>
 								<object class="NSSegmentedCell" key="NSCell" id="139360632">
@@ -86,19 +89,25 @@
 									<reference key="NSControlView" ref="335945147"/>
 									<array class="NSMutableArray" key="NSSegmentImages">
 										<object class="NSSegmentItem">
-											<double key="NSSegmentItemWidth">32</double>
-											<string key="NSSegmentItemLabel"/>
+											<string key="NSSegmentItemLabel">project</string>
 											<bool key="NSSegmentItemSelected">YES</bool>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 										<object class="NSSegmentItem">
-											<double key="NSSegmentItemWidth">32</double>
-											<string key="NSSegmentItemLabel"/>
+											<string key="NSSegmentItemLabel">author</string>
 											<int key="NSSegmentItemTag">1</int>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 										<object class="NSSegmentItem">
-											<double key="NSSegmentItemWidth">32</double>
+											<string key="NSSegmentItemLabel">priority</string>
+											<int key="NSSegmentItemImageScaling">0</int>
+										</object>
+										<object class="NSSegmentItem">
+											<string key="NSSegmentItemLabel">status</string>
+											<int key="NSSegmentItemImageScaling">0</int>
+										</object>
+										<object class="NSSegmentItem">
+											<string key="NSSegmentItemLabel">created_on</string>
 											<int key="NSSegmentItemImageScaling">0</int>
 										</object>
 									</array>
@@ -110,7 +119,7 @@
 							<nil key="NSToolbarItemTarget"/>
 							<nil key="NSToolbarItemAction"/>
 							<string key="NSToolbarItemMinSize">{100, 25}</string>
-							<string key="NSToolbarItemMaxSize">{104, 25}</string>
+							<string key="NSToolbarItemMaxSize">{348, 25}</string>
 							<bool key="NSToolbarItemEnabled">YES</bool>
 							<bool key="NSToolbarItemAutovalidates">YES</bool>
 							<int key="NSToolbarItemTag">0</int>
@@ -413,6 +422,7 @@
 									<string key="NSFrame">{{1, 256}, {480, 15}}</string>
 									<reference key="NSSuperview" ref="122421175"/>
 									<reference key="NSWindow"/>
+									<reference key="NSNextKeyView"/>
 									<string key="NSReuseIdentifierKey">_NS:60</string>
 									<bool key="NSEnabled">YES</bool>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -721,7 +731,7 @@
 				<string key="69.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="81.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<integer value="0" key="82.IBNSSegmentedControlInspectorSelectedSegmentMetadataKey"/>
+				<integer value="4" key="82.IBNSSegmentedControlInspectorSelectedSegmentMetadataKey"/>
 				<string key="82.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="83.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="86.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
