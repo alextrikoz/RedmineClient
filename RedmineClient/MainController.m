@@ -144,6 +144,10 @@
     }
     
     [self.outlineView reloadData];
+    
+    for (int i = 0; i < self.outlineView.numberOfRows; i++) {
+        [self.outlineView expandItem:[self.outlineView itemAtRow:i]];
+    }
 }
 
 - (NSArray *)childrenForItem:(ItemProxy *)item {
