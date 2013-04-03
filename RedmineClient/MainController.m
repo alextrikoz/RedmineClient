@@ -17,7 +17,7 @@
 #import "ItemProxy.h"
 #import "Tracker.h"
 
-@interface MainController ()
+@interface MainController () <NSOutlineViewDataSource, NSOpenSavePanelDelegate>
 
 @property IBOutlet NSSegmentedControl *segmentedControl;
 @property IBOutlet NSOutlineView *outlineView;
@@ -150,8 +150,10 @@
     }
 }
 
+#pragma mark - NSOutlineViewDataSource
+
 - (NSArray *)childrenForItem:(ItemProxy *)item {
-    return (item == nil) ? self.groups : [item children]; 
+    return (item == nil) ? self.groups : item.children;
 }
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
@@ -162,22 +164,26 @@
     return [self childrenForItem:item][index];
 }
 
-- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
-    return [item isItemExpandable];
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(ItemProxy *)item {
+    return item.isItemExpandable;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(ItemProxy *)item {
+    return item.isItemExpandable;
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(ItemProxy *)item {
     if (tableColumn.identifier == nil) {
-        return [item name];
+        return item.name;
     }
     if ([tableColumn.identifier isEqualToString:@"number"]) {
-        return [item number];
-    } else if ([tableColumn.identifier isEqualToString:@"subject"]) {
-        return [item subject];
-    } else if ([tableColumn.identifier isEqualToString:@"priority"]) {
-        return [item priority];
+        return item.number;
     } else if ([tableColumn.identifier isEqualToString:@"created_on"]) {
-        return [item created_on];
+        return item.created_on;
+    } else if ([tableColumn.identifier isEqualToString:@"priority"]) {
+        return item.priority;
+    } else if ([tableColumn.identifier isEqualToString:@"subject"]) {
+        return item.subject;
     } else {
         return nil;
     }
@@ -185,13 +191,11 @@
 
 - (NSCell *)outlineView:(NSOutlineView *)outlineView dataCellForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
     if ([item isItemExpandable]) {
-        return [[self.outlineView tableColumnWithIdentifier:@"number"] dataCell];
+        NSCell *dataCell = [[self.outlineView tableColumnWithIdentifier:@"number"] dataCell];
+        dataCell.editable = NO;
+        return dataCell;
     }
     return [tableColumn dataCell];
-}
-
-- (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item {
-    return [item isItemExpandable];
 }
 
 - (void)outlineView:(NSOutlineView *)outlineView sortDescriptorsDidChange:(NSArray *)oldDescriptors {
