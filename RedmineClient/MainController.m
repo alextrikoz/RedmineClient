@@ -17,7 +17,7 @@
 #import "ItemProxy.h"
 #import "Tracker.h"
 
-@interface MainController () <NSOutlineViewDataSource, NSOpenSavePanelDelegate>
+@interface MainController () <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
 @property IBOutlet NSSegmentedControl *segmentedControl;
 @property IBOutlet NSOutlineView *outlineView;
@@ -38,10 +38,9 @@
     [self refresh:nil];
 }
 
-#pragma mark - Button Actions
+#pragma mark - IBActions
 
 - (IBAction)bulkMyTime:(id)sender {
-    
     NSAlert *alert = [[NSAlert alloc] init];
     [alert addButtonWithTitle:@"OK"];
     [alert addButtonWithTitle:@"Cancel"];
@@ -150,7 +149,7 @@
     }
 }
 
-#pragma mark - NSOutlineViewDataSource
+#pragma mark - NSOutlineViewDataSource & NSOutlineViewDelegate
 
 - (NSArray *)childrenForItem:(ItemProxy *)item {
     return (item == nil) ? self.groups : item.children;
@@ -175,8 +174,7 @@
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(ItemProxy *)item {
     if (tableColumn.identifier == nil) {
         return item.name;
-    }
-    if ([tableColumn.identifier isEqualToString:@"number"]) {
+    } else if ([tableColumn.identifier isEqualToString:@"number"]) {
         return item.number;
     } else if ([tableColumn.identifier isEqualToString:@"created_on"]) {
         return item.created_on;
