@@ -19,6 +19,8 @@
 @property (readonly) NSString *name;
 
 @property (readonly) NSString *number;
+@property (readonly) NSString *priority;
+@property (readonly) NSString *created_on;
 @property (readonly) NSString *subject;
 
 @end

@@ -11,7 +11,6 @@
 #import "AssignedTo.h"
 #import "Project.h"
 #import "Author.h"
-#import "Priority.h"
 #import "Tracker.h"
 #import "Status.h"
 #import "FixedVersion.h"
@@ -46,7 +45,7 @@
     self.updated_on = [dictionary objectForKey:UPDATED_ON_KEY];
     self.start_date = [dictionary objectForKey:START_DATE_KEY];
     self.priority = [Priority objectWithDictionary:[dictionary objectForKey:PRIORITY_KEY]];
-    self.created_on = [dictionary objectForKey:CREATED_ON_KEY];
+    self.created_on = [[dictionary objectForKey:CREATED_ON_KEY] substringToIndex:10];
     self.tracker = [Tracker objectWithDictionary:[dictionary objectForKey:TRACKER_KEY]];
     self.status = [Status objectWithDictionary:[dictionary objectForKey:STATUS_KEY]];
     self.fixed_version = [FixedVersion objectWithDictionary:[dictionary objectForKey:FIXED_VERSION_KEY]];

@@ -15,6 +15,7 @@
 #import "Priority.h"
 #import "ItemProxy.h"
 
+
 @interface MainController ()
 
 @property IBOutlet NSSegmentedControl *segmentedControl;
@@ -34,6 +35,22 @@
     [super windowDidLoad];
     
     [self refresh:nil];
+}
+
+#pragma mark - Button Actions
+
+- (IBAction)bulkMyTime:(id)sender {
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert setMessageText:@"Time Distribution"];
+    [alert setInformativeText:@"#123456 Issue - ...\n#123456 Issue - ..."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert beginSheetModalForWindow:[[NSApplication sharedApplication] mainWindow]
+                      modalDelegate:self
+                     didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:)
+                        contextInfo:nil];
 }
 
 - (IBAction)refresh:(id)sender {
@@ -93,7 +110,7 @@
 }
 
 - (NSArray *)childrenForItem:(ItemProxy *)item {
-    return (item == nil) ? self.groups : [item children];
+    return (item == nil) ? self.groups : [item children]; 
 }
 
 - (NSInteger)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
@@ -108,7 +125,7 @@
     return [item isItemExpandable];
 }
 
-- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item {
+- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(ItemProxy *)item {
     if (tableColumn.identifier == nil) {
         return [item name];
     }
@@ -116,6 +133,10 @@
         return [item number];
     } else if ([tableColumn.identifier isEqualToString:@"subject"]) {
         return [item subject];
+    } else if ([tableColumn.identifier isEqualToString:@"priority"]) {
+        return [item priority];
+    } else if ([tableColumn.identifier isEqualToString:@"created_on"]) {
+        return [item created_on];
     } else {
         return nil;
     }
@@ -130,6 +151,13 @@
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isGroupItem:(id)item {
     return [item isItemExpandable];
+}
+
+- (void)outlineView:(NSOutlineView *)outlineView sortDescriptorsDidChange:(NSArray *)oldDescriptors {
+    for (ItemProxy *group in self.groups) {
+        group.children = [[group.children sortedArrayUsingDescriptors:outlineView.sortDescriptors] mutableCopy];
+    }
+    [self.outlineView reloadData];
 }
 
 @end

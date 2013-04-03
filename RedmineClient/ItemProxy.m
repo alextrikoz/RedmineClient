@@ -46,6 +46,14 @@
     return [self.item valueForKey:@"id"];
 }
 
+- (NSString *)priority {
+    return [[self.item valueForKey:@"priority"] valueForKey:@"name"];
+}
+
+- (NSString *)created_on {
+    return [self.item valueForKey:@"created_on"];
+}
+
 - (NSString *)subject {
     return [self.item valueForKey:@"subject"];
 }
